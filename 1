@@ -1,0 +1,49 @@
+1-Create a user
+sudo su  
+
+2-useradd username
+ useradd denisa
+
+3-passwd username
+passwd denisa
+
+4-check if user is created  
+ cat /etc/pass
+ 
+5-check to which group this user belongs to :
+ cat /etc/sudoers.d/
+ ll
+ 
+6-add the newly created user to this group
+ usermod -aG vagrant denisa
+
+7-su denisa
+
+8-print working directory
+pwd
+ 
+9- ll -a 
+
+10- mkdir  .ssh
+
+11- chmod 700 .ssh
+
+12- cd  .ssh
+
+13- touch authorized_keys
+
+14- chmod 600 authorized_keys
+
+15- Generate a ssh key pair for this user 
+ssh-keygen  -t  rsa
+less denisa.pub 
+
+16-copy public key
+ vi authorized_keys
+
+17-less denisa
+
+18-Copy the private kay content and paste it in a notepad
+ then save it as .ppk file
+
+19- Convert the private key in a putty format key with puttygen tool
